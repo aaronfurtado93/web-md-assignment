@@ -1,0 +1,25 @@
+.selected-item {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  margin: 1em;
+  padding: 1em;
+
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: contain;
+
+  box-shadow: 0 0 1em 1em lightgray;
+
+  border-radius: 0.5em;
+
+  .spacer {
+    flex: 1;
+  }
+}
+
+.no-item-selected {
+  margin: auto;
+}

@@ -1,2 +1,23 @@
-<p>details works!</p>
-<pre>{{selectedItem | json}}</pre>
+<div
+  class="selected-item"
+  *ngIf="selectedItem; else noItemSelected"
+  [ngStyle]="{
+    'background-image': 'url(' + selectedItem.data[0]?.backgroundImage + ')'
+  }"
+>
+  <h3>{{selectedItem.title}}</h3>
+  <p *ngIf="selectedItem.data[0].descriptiveText">
+    {{selectedItem.data[0].descriptiveText}}
+  </p>
+  <div class="spacer"></div>
+  <a
+    *ngIf="selectedItem.data[0].webLink"
+    [href]="selectedItem.data[0].webLink"
+    [target]="selectedItem.title"
+  >{{selectedItem.data[0].webLink}}</a>
+</div>
+<ng-template #noItemSelected>
+  <div class="no-item-selected">
+    Select an item from the list
+  </div>
+</ng-template>

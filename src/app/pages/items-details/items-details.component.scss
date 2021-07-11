@@ -1,0 +1,21 @@
+.page-container {
+  display: flex;
+  height: 100vh;
+
+  app-items, app-details {
+    flex: 1;
+
+    display: flex;
+
+    margin: 1em;
+    padding: 1em;
+
+    box-shadow: 0 0 1em 1em lightgray inset;
+
+    border-radius: 1em;
+  }
+
+  app-details {
+    flex-direction: column;
+  }
+}
