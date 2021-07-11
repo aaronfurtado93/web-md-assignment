@@ -1,1 +1,5 @@
-<p>items works!</p>
+<ul>
+  <li *ngFor="let item of items">
+    <a [routerLink]="['/items-details', item.title]">{{item.title}}</a>
+  </li>
+</ul>

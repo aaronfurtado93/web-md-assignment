@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {IItem} from "../../data-models/iitem";
 
 @Component({
   selector: 'app-items',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./items.component.scss']
 })
 export class ItemsComponent implements OnInit {
+
+  @Input() items: IItem[] = [];
 
   constructor() { }
 

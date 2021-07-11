@@ -9,7 +9,7 @@ import {IItem} from "../../data-models/iitem";
 })
 export class ItemsDetailsComponent implements OnInit {
 
-  itemsList: IItem[] = [];
+  items: IItem[] = [];
 
   constructor(
     private itemsListService: ItemsListService
@@ -17,7 +17,7 @@ export class ItemsDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.itemsListService.get()
-      .subscribe(value => this.itemsList = value)
+      .subscribe(value => this.items = value)
   }
 
 }
