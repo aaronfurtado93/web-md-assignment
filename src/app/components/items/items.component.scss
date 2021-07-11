@@ -1,0 +1,28 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 2em 1em;
+
+    border-radius: 0.5em;
+
+    box-shadow: 0 0 1em 1em lightgray;
+
+    &.selected {
+      border: 4px solid skyblue;
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      padding: 1em;
+      color: black;
+    }
+  }
+
+  &:first-child {
+    margin-top: -1em;
+  }
+}

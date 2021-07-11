@@ -1,5 +1,10 @@
 <ul>
-  <li *ngFor="let item of items">
-    <a [routerLink]="['/items-details', item.title]">{{item.title}}</a>
+  <li *ngFor="let item of items"
+      [ngClass]="{
+        'selected': item.title === selectedItem?.title
+       }"
+  >
+    <a [routerLink]="['/items-details', item.title]"
+    >{{item.title}}</a>
   </li>
 </ul>

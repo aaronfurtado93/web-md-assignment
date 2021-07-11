@@ -9,6 +9,7 @@ import {IItem} from "../../data-models/iitem";
 export class ItemsComponent implements OnInit {
 
   @Input() items: IItem[] = [];
+  @Input() selectedItem: IItem | undefined;
 
   constructor() { }
 
