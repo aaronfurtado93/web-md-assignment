@@ -1,6 +1,30 @@
 .selected-item {
   .go-back {
     display: none;
+    a {
+      display: flex;
+
+      align-items: center;
+
+      text-decoration: none;
+      color: orange;
+
+      padding: 0.5em;
+      border: 1px solid orange;
+      border-radius: 0.25em;
+
+      .back-icon {
+        display: inline-block;
+        border: .5em solid transparent;
+        border-right-color: orange;
+      }
+
+      .text {
+        padding: 0 1em;
+      }
+
+
+    }
   }
 
   flex: 1;
@@ -30,6 +54,7 @@
 
 @media screen and (max-width: 640px) {
   .go-back {
-    display: block !important;
+    display: flex !important;
+    align-items: center;
   }
 }

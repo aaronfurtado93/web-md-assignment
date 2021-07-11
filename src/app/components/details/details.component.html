@@ -5,10 +5,11 @@
     'background-image': 'url(' + selectedItem.data[0]?.backgroundImage + ')'
   }"
 >
-  <a
-    class="go-back"
-    [routerLink]="['/items-details']"
-  ><span class="back-icon"></span> Go Back</a>
+  <div class="go-back">
+    <a
+      [routerLink]="['/items-details']"
+    ><span class="back-icon"></span><span class="text">Go Back</span></a>
+  </div>
 
   <h3>{{selectedItem.title}}</h3>
   <p *ngIf="selectedItem.data[0].descriptiveText">
