@@ -1,4 +1,15 @@
 <div class="page-container">
-  <app-items [items]="items" [selectedItem]="selectedItem"></app-items>
-  <app-details [selectedItem]="selectedItem"></app-details>
+  <app-items
+    [items]="items"
+    [selectedItem]="selectedItem"
+    [ngClass]="{
+      'item-selected': !!selectedItem
+    }"
+  ></app-items>
+  <app-details
+    [selectedItem]="selectedItem"
+    [ngClass]="{
+      'item-selected': !!selectedItem
+    }"
+  ></app-details>
 </div>

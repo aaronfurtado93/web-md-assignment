@@ -1,4 +1,8 @@
 .selected-item {
+  .go-back {
+    display: none;
+  }
+
   flex: 1;
 
   display: flex;
@@ -22,4 +26,10 @@
 
 .no-item-selected {
   margin: auto;
+}
+
+@media screen and (max-width: 640px) {
+  .go-back {
+    display: block !important;
+  }
 }

@@ -19,4 +19,20 @@
   app-items {
     overflow-y: auto;
   }
+
+  @media screen and (max-width: 640px) {
+    app-items {
+      &.item-selected {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    app-details {
+      &:not(.item-selected) {
+        display: none;
+      }
+    }
+  }
 }
